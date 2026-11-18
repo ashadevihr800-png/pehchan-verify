@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajasthan Civil Registration System</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #e6ebf0;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    .certificate-container {
+      width: 100%;
+      max-width: 440px;
+      background: #ffffff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+
+    /* TOP SECTION */
+    .top-header {
+      background: linear-gradient(180deg, #0b3c65 0%, #082d4a 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 16px 12px 18px 12px;
+      border-bottom: 3px solid #051d30;
+    }
+    .logos-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 4px;
+      margin-bottom: 14px;
+    }
+    .emblem-img {
+      height: 50px;
+      width: auto;
+    }
+    .pehchan-banner-img {
+      height: 38px;
+      width: auto;
+    }
+    .right-logo-img {
+      height: 36px;
+      width: auto;
+    }
+    .top-header h1 {
+      font-size: 19px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      letter-spacing: 0.2px;
+    }
+    .top-header h2 {
+      font-size: 14px;
+      font-weight: normal;
+      margin-bottom: 3px;
+    }
+    .top-header h3 {
+      font-size: 13px;
+      font-weight: normal;
+      opacity: 0.95;
+    }
+
+    /* MIDDLE SECTION */
+    .middle-section {
+      background-color: #d8e6f3;
+      border-left: 5px solid #4a7ebb;
+      border-right: 5px solid #4a7ebb;
+      padding: 12px 14px 20px 14px;
+    }
+    .mid-sub-header {
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #538cc6;
+      padding: 7px 0;
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .mid-sub-header::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 8px 10px 0;
+      border-style: solid;
+      border-color: #538cc6 transparent;
+      display: block;
+      width: 0;
+    }
+
+    /* Click animation rows */
+    .data-row {
+      padding: 8px 10px;
+      margin-bottom: 4px;
+      cursor: pointer;
+      transition: transform 0.18s ease, background-color 0.18s ease;
+      border-radius: 2px;
+    }
+    .data-row:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+    .data-row.active {
+      transform: translateX(6px) scale(1.02);
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+    .row-label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #111111;
+    }
+    .row-value {
+      font-size: 14px;
+      font-weight: normal;
+      color: #102566;
+    }
+
+    /* BOTTOM SECTION */
+    .bottom-footer {
+      background: linear-gradient(180deg, #0b3c65 0%, #082d4a 100%);
+      color: #ffffff;
+      padding: 16px 14px 20px 14px;
+      text-align: center;
+      border-top: 3px solid #051d30;
+    }
+    .nic-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .nic-striped-text {
+      font-family: 'Arial Black', Impact, sans-serif;
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -1px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #ffffff 0px,
+        #ffffff 2.5px,
+        #0b3c65 2.5px,
+        #0b3c65 4px
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nic-text-block {
+      text-align: left;
+      line-height: 1.15;
+    }
+    .nic-hindi {
+      font-size: 11px;
+      font-weight: bold;
+    }
+    .nic-eng {
+      font-size: 10px;
+      font-weight: 600;
+    }
+    .footer-text {
+      font-size: 12px;
+      line-height: 1.45;
+      opacity: 0.95;
+      margin-bottom: 6px;
+    }
+    .helpline-row {
+      margin-top: 10px;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="certificate-container">
+    
+    <!-- TOP SECTION -->
+    <div class="top-header">
+      <div class="logos-row">
+        <div>
+          <img src="emblem.png" alt="Satyamev Jayate" class="emblem-img">
+        </div>
+        <div>
+          <img src="pehchan.png" alt="Pehchan" class="pehchan-banner-img">
+        </div>
+        <div>
+          <img src="logo.png" alt="Portal Logo" class="right-logo-img">
+        </div>
+      </div>
+
+      <h1>Rajasthan Civil Registration System</h1>
+      <h2>Government Of Rajasthan</h2>
+      <h3>Directorate of Economics and Statistics</h3>
+    </div>
+
+    <!-- MIDDLE SECTION -->
+    <div class="middle-section">
+      <div class="mid-sub-header">Birth Registration</div>
+
+      <div class="data-row" onclick="selectRow(this)">
+        <div class="row-label">Registration No. :</div>
+        <div class="row-value">08110005400051100011 / 2026</div>
+      </div>
+
+      <div class="data-row" onclick="selectRow(this)">
+        <div class="row-label">Registration Date :</div>
+        <div class="row-value">24/03/2026</div>
+      </div>
+
+      <div class="data-row" onclick="selectRow(this)">
+        <div class="row-label">Date of Birth :</div>
+        <div class="row-value">06/05/1989</div>
+      </div>
+
+      <div class="data-row" onclick="selectRow(this)">
+        <div class="row-label">Child Name :</div>
+        <div class="row-value">नन्छी कलवानिया / Nanchhi Kalwaniya</div>
+      </div>
+
+      <div class="data-row" onclick="selectRow(this)">
+        <div class="row-label">Gender :</div>
+        <div class="row-value">महिला/Female</div>
+      </div>
+
+      <div class="data-row" onclick="selectRow(this)">
+        <div class="row-label">Father's Name :</div>
+        <div class="row-value">शंकर लाल कलवानिया / Shankar Lal Kalwaniya</div>
+      </div>
+
+      <div class="data-row" onclick="selectRow(this)">
+        <div class="row-label">Mother's Name :</div>
+        <div class="row-value">कमली देवी / Kamli Devi</div>
+      </div>
+
+      <div class="data-row" onclick="selectRow(this)">
+        <div class="row-label">Place of Birth :</div>
+        <div class="row-value">रानीपुरा / मुरलीपुरा / शाहपुरा / जयपुर / राजस्थान / RANIPURA / MURLIPURA / SHAHPURA / JAIPUR / RAJASTHAN</div>
+      </div>
+    </div>
+
+    <!-- BOTTOM SECTION -->
+    <div class="bottom-footer">
+      <div class="nic-header-row">
+        <div class="nic-striped-text">NIC</div>
+        <div class="nic-text-block">
+          <div class="nic-hindi">एन आई सी</div>
+          <div class="nic-eng">National Informatics Centre</div>
+        </div>
+      </div>
+
+      <div class="footer-text">
+        Designed, Developed and Hosted by<br>
+        <b>National Informatics Centre, Rajasthan</b>
+      </div>
+      <div class="footer-text">
+        Content owned, updated and maintained by the Chief Registrar (Birth-Death), Rajasthan.
+      </div>
+      <div class="footer-text">
+        Nodal Officer: Deputy Director(Vital), Directorate of Economics and Statistics, Rajasthan.
+      </div>
+      <div class="helpline-row">
+        Helpline (Toll Free) : <b>18001806785</b> &#9993;<br>
+        jdvital[dot]des[at]rajasthan[dot]gov[dot]in
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function selectRow(element) {
+      const rows = document.querySelectorAll('.data-row');
+      rows.forEach(row => {
+        if (row !== element) {
+          row.classList.remove('active');
+        }
+      });
+      element.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
